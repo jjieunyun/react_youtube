@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
+import VideoItem from './videoItem';
 
-class Card extends Component {
+class VideoList extends Component {
     render() {
         return (
             <div>
-                
+                <VideoItem/>
             </div>
         );
     }
 }
 
-export default Card;
+export default VideoList;
