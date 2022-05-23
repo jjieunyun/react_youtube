@@ -4,6 +4,7 @@
     height: 100vh;
     border: 1px solid red;
     width: 5rem;
+    display: none;
 }
 
 .sideNave_home, .sideNave_explore,
