@@ -1,11 +1,19 @@
 import React from 'react';
+import styles from  './videoItem.module.css'
 
-const VideoItem = (props) => {
+//props.video의 snippet을 가져오려고  비구조화 진행
+const VideoItem = ({video : {snippet}}) => {
     return (
-        <div>
-            <img src={props.video.snippet.thumbnails.medium.url} alt="" />
-            <h3>{props.video.snippet.title}</h3>
-        </div>
+        <li className={styles.container}>
+            <div className={styles.video}>
+                <img className={styles.thumbnail} src={snippet.thumbnails.medium.url} alt="video thumbnail" />
+                <div className={styles.metadata}>
+                    <p className={styles.title}>{snippet.title}</p>
+                    <p className={styles.channel}>{snippet.channelTitle}</p>
+                </div>
+            </div>
+            
+        </li>
     );
 };
 
