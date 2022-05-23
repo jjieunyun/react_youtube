@@ -1,0 +1,14 @@
+.sideNav {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    border: 1px solid red;
+    width: 5rem;
+}
+
+.sideNave_home, .sideNave_explore,
+.sideNave_subs, .sideNave_originals,
+.sideNave_music, .sideNave_library,
+.sideNave_downloads {
+    border: 1px solid blue;
+}

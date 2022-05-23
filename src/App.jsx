@@ -1,6 +1,7 @@
 import React, { useEffect,useState } from 'react';
 import './App.css';
 import Search from './components/search';
+import SideNav from './components/sideNav';
 import VideoList from './components/video_list/videoList';
 
 
@@ -15,7 +16,7 @@ const App = () => {
         redirect: 'follow'
       };
       
-      fetch("https://youtube.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=25&regionCode=US&key=AIzaSyD8cQCIhK_BYYvpIi46SkHciB2y98vEW_Y&key=AIzaSyD8cQCIhK_BYYvpIi46SkHciB2y98vEW_Y", requestOptions)
+      fetch("https://youtube.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=28&regionCode=US&key=AIzaSyD8cQCIhK_BYYvpIi46SkHciB2y98vEW_Y&key=AIzaSyD8cQCIhK_BYYvpIi46SkHciB2y98vEW_Y", requestOptions)
         //⭐작업을 편하게 하려면 text json이 편하다
       //.then(response => response.text())
         .then(response => response.json())
@@ -26,6 +27,7 @@ const App = () => {
   return (
     <div className="App">
       <Search/>
+      
       <VideoList videos={videos} />
     </div>
   );

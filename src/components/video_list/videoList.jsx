@@ -4,11 +4,15 @@ import styles from './videoList.module.css'
 
 const VideoList = (props) => {
     return (
-        <ul className={styles.videos}>
-            {props.videos.map( video => (
-                <VideoItem key={video.id} video={video}/>
-            ))}
-        </ul>
+        <div>
+            <p className={styles.videos_title}>Trending videos</p>
+            <ul className={styles.videos}>
+                {props.videos.map( video => (
+                    <VideoItem key={video.id} video={video}/>
+                ))}
+            </ul>
+        </div>
+        
     );
 };
 
