@@ -1,7 +1,7 @@
 import React, { useEffect,useState } from 'react';
 import styles from './App.module.css';
 import Search from './components/search';
-import SideNav from './components/sideNav';
+//import SideNav from './components/sideNav';
 import VideoList from './components/video_list/videoList';
 
 
@@ -14,7 +14,7 @@ import VideoList from './components/video_list/videoList';
 //       redirect: 'follow'
 //     };
     
-//     fetch(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=28&q=${query}&type=video&key=AIzaSyD8cQCIhK_BYYvpIi46SkHciB2y98vEW_Y`, requestOptions)
+//     fetch(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=28&q=${query}&type=video&key=AIzaSyDB1-CImqPIh7dO7HY6O7plTrTus5IDenk`, requestOptions)
 //       .then(response => response.json())
 //       .then(result => result.items.map(item => ({...item, id : item.id.videoId})))
 //       .then(items => setVideos(items))
@@ -29,7 +29,7 @@ import VideoList from './components/video_list/videoList';
 //         redirect: 'follow'
 //       };
       
-//       fetch("https://youtube.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=28&regionCode=US&key=AIzaSyD8cQCIhK_BYYvpIi46SkHciB2y98vEW_Y&key=AIzaSyD8cQCIhK_BYYvpIi46SkHciB2y98vEW_Y", requestOptions)
+//       fetch("https://youtube.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=28&regionCode=US&key=AIzaSyD8cQCIhK_BYYvpIi46SkHciB2y98vEW_Y&key=AIzaSyDB1-CImqPIh7dO7HY6O7plTrTus5IDenk", requestOptions)
 //         //⭐작업을 편하게 하려면 text json이 편하다
 //       //.then(response => response.text())
 //         .then(response => response.json())
@@ -54,7 +54,7 @@ import VideoList from './components/video_list/videoList';
 function App({ youtube }) {
   const [videos, setVideos] = useState([]);
   //⭐query를 인자값으로 받아서 fetch해줌
-  const search = query => {
+  const search = (query) => {
     youtube
       .search(query) 
       .then(videos => setVideos(videos));
@@ -68,7 +68,6 @@ function App({ youtube }) {
   return (
     <div className={styles.app}>
       <Search onSearch={search}/>
-      <SideNav/>
       <VideoList videos={videos} />
     </div>
   );

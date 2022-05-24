@@ -28,7 +28,7 @@
 
 .header input {
     font-size: 1.5rem;
-    border: 3px dashed black;
+    border: 2px dashed black;
     border-radius: 5px;
     box-shadow: 3px 3px 5px 0px rgba(191,191,191,0.53);
     width: 45%;
