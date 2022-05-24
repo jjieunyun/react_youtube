@@ -1,17 +1,17 @@
-import styles from '../components/search.module.css'
+import styles from './search.module.css'
 
-import React,{useRef, useState} from 'react';
+import React,{useRef} from 'react';
 
 const Search = ({onSearch}) => {
     const inputRef = useRef();
-    const [pValue, setPValue] = useState('Trending videos');
-    const [result, setResult] = useState('')
+    // const [pValue, setPValue] = useState('Trending videos');
+    // const [result, setResult] = useState('')
 
     const handleSearch = () => {
         const value = inputRef.current.value;
         onSearch(value)
-        setPValue('The search results of ')
-        setResult(`${inputRef.current.value}`)
+        // setPValue('The search results of ')
+        // setResult(`${inputRef.current.value}`)
     }
 
     const onClick= ()=>{
@@ -39,10 +39,10 @@ const Search = ({onSearch}) => {
                 onClick={onClick}>
                 <i type='submit' className="fa-solid fa-magnifying-glass"></i>
             </button>
-            <p 
+            {/* <p 
                 className={styles.videos_title}
                 
-            >{pValue}<span className={styles.videos_value}>{result}</span></p>
+            >{pValue}<span className={styles.videos_value}>{result}</span></p> */}
         </header>
     );
 };
