@@ -10,7 +10,7 @@
         mostPopular() {
             //⭐인자값으로 아무것도 없다면 컴포넌트의 state나 props가 바뀔때만 호출
         return fetch(
-            `https://youtube.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=28&regionCode=US&key=${this.key}`,
+            `https://youtube.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=28&regionCode=KR&key=${this.key}`,
             this.getRequestOptions
         //⭐작업을 편하게 하려면 text json이 편하다
         //.then(response => response.text())
