@@ -7,13 +7,61 @@ iframe {
     padding-right: 0.5rem;
 }
 
-pre {
-    
-    
-}
 
 .description {
     white-space: pre-wrap;
     width: 100%;
     padding-right: 0.5rem;
+}
+
+.metadata .hashtags {
+    padding-left: 0.2rem;
+    display: flex;
+    font-size: 0.8rem;
+    color: #045fd4;
+}
+
+.metadata .hashtags li {
+    list-style: none;
+    margin-right: 0.8em;
+}
+
+.views {
+    font-size: 0.8rem;
+    color: #909090;
+}
+
+.actions {
+    display: flex;
+    justify-content: space-around;
+    margin: 0.8rem 0;
+    list-style: none;
+    margin-left: 0;
+    margin-right: 2rem;
+}
+
+.actions button {
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    display: flex;
+    align-items:center;
+    flex-direction: column;
+    font-size: 0.8rem;
+    color: #909090;
+}
+
+.actions button:hover {
+    color: #045fd4;
+}
+
+.actions button i {
+    /*글자를 가운데 하고싶을때 : 위아래0 ,양옆은 오토로*/
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    font-size: 16px;
+}
+
+.actions button i .active {
+    color: #045fd4;
 }

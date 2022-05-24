@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import styles from './app.module.css';
+import styles from './App.module.css';
 import VideoList from './components/video_list/video_list';
 import Search from './components/seach_header/search';
 import VideoDetail from './components/video_detail/video_detail';
