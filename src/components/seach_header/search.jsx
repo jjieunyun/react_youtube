@@ -1,8 +1,8 @@
 import styles from './search.module.css'
 
-import React,{useRef} from 'react';
+import React,{memo, useRef} from 'react';
 
-const Search = ({onSearch}) => {
+const Search = memo(({onSearch}) => {
     const inputRef = useRef();
     // const [pValue, setPValue] = useState('Trending videos');
     // const [result, setResult] = useState('')
@@ -45,6 +45,6 @@ const Search = ({onSearch}) => {
             >{pValue}<span className={styles.videos_value}>{result}</span></p> */}
         </header>
     );
-};
+});
 
 export default Search;
