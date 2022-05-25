@@ -5,3 +5,8 @@
     padding-left: 0;
 }
 
+@media screen and (max-width:360px) {
+    .videos li {
+        width: 100%;
+    }
+}

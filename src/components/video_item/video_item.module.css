@@ -46,3 +46,9 @@
 .channel {
     font-size: 0.6rem;
 }
+
+@media screen and (max-width:360px) {
+    .videos li {
+        width: 100%;
+    }
+}

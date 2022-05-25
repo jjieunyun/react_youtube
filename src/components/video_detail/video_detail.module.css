@@ -65,3 +65,12 @@ iframe {
 .actions button i .active {
     color: #045fd4;
 }
+
+
+
+@media screen and (max-width:360px) {
+    .video {
+        height: 100%;
+    }
+
+}
